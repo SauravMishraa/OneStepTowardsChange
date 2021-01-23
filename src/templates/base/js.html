@@ -1,7 +1,50 @@
 {% load static %}
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Check if there are any navbar burgers
+if ($navbarBurgers.length > 0) {
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+}
+
+});
+      </script>
+
+    <script src="https://kit.fontawesome.com/ef5547766a.js" crossorigin="anonymous"></script> 
+
+   <!-- Scripts -->
+
+    <script src="   {% static 'js/jquery.min.js' %}
+"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="   {% static 'js/popper.min.js' %}
+"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="   {% static 'js/bootstrap.min.js' %}
+"></script> <!-- Bootstrap framework -->
+    <script src="   {% static 'js/jquery.easing.min.js' %}
+"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="   {% static 'js/swiper.min.js' %}
+"></script> <!-- Swiper for image and text sliders -->
+    <script src="   {% static 'js/jquery.magnific-popup.js' %}
+"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="   {% static 'js/validator.min.js' %}
+"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="   {% static 'js/scripts.js' %}
+"></script> <!-- Custom scripts -->
