@@ -1,7 +1,566 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}                        
-<h1> This is main homepaage </h1>
+{% block custom_css %}
+#main_slider .carousel-control-prev,
+#main_slider .carousel-control-next {
+     width: 55px;
+     height: 55px;
+     background: #e0e5e5;
+     opacity: 1;
+     font-size: 30px;
+     color: #000;
+     border-radius: 30px;
+}
+#main_slider .carousel-control-prev:hover,
+#main_slider .carousel-control-next:hover,
+#main_slider .carousel-control-prev:focus,
+#main_slider .carousel-control-next:focus {
+     background: #308409;
+     color: #fff;
+}
+#main_slider a.carousel-control-prev {
+     position: absolute;
+     right: 82px;
+     bottom: 10px;
+     top: inherit;
+}
+#main_slider a.carousel-control-next {
+     position: absolute;
+     right: 40px;
+     top: inherit;
+     bottom: 10px;
+}
+    #one{
 
+     background-image: url(https://source.unsplash.com/collection/190727/1600x900) ;
+     background-size: cover;
+     background-position:center;
+}
+  #second{
+
+     background-image: url(https://source.unsplash.com/collection/190727/1600x900) ;
+     background-size: cover;
+     background-position:center;
+}
+  #third{
+
+     background-image: url(https://source.unsplash.com/collection/190727/1600x900) ;
+     background-size: cover;
+     background-position:center;
+}
+.blue_pattern_bg {
+    background-image: url('images/blue_bg.png');
+    background-attachment: fixed;
+    background-position: center center;
+    min-height: 300px;
+    padding: 100px 0 0;
+}
+
+.blue_pattern_bg h4 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.blue_pattern_bg p {
+    margin: 0 !important;
+    color: #fff;
+}
+.form_subribe input {
+    width: 100%;
+    background: #fff;
+    border: none;
+    height: 60px;
+    padding: 0 170px 0 25px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+form {
+    position: relative;
+}
+
+.form_subribe button {
+    background: #f06008;
+    border: none;
+    color: #fff;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 170px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 62px;
+}
+
+.form_subribe {
+    border-radius: 75px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+{% endblock custom_css %}
+{% block title %} Grow India - Home {% endblock title %}
+{% block content %}                        
+
+
+  
+  <body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    
+
+<header id="header" class="header">
+  <!-- Navigation Bar Starts Here -->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <!-- Text Logo - Use this if you don't have a graphic logo -->
+  <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Evolo</a> -->
+
+  <!-- Image Logo -->
+  <a class="navbar-brand logo-image" href="second_layout.html"><h4>GrowIndia</h4></a>
+  
+  <!-- Mobile Menu Toggle Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-awesome fas fa-bars"></span>
+      <span class="navbar-toggler-awesome fas fa-times"></span>
+  </button>
+  <!-- end of mobile menu toggle button -->
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link page-scroll" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link page-scroll" href="#">Trending</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link page-scroll" href="#request">Join Us As Professional</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#contact">Contact</a>
+        </li>
+          <!-- Dropdown Menu -->          
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#"><span class="item-text">One</span></a>
+                  <div class="dropdown-items-divide-hr"></div>
+                  <a class="dropdown-item" href="#"><span class="item-text">Two</span></a>
+                  <div class="dropdown-items-divide-hr"></div>
+                  <a class="dropdown-item" href="#"><span class="item-text">Three</span></a>
+                  <div class="dropdown-items-divide-hr"></div>
+                  <a class="dropdown-item" href="#"><span class="item-text">Four</span></a>
+                  <div class="dropdown-items-divide-hr"></div>
+                  <a class="dropdown-item" href="#"><span class="item-text">Five</span></a>
+              </div>
+          </li>
+          <!-- end of dropdown menu -->
+
+          
+      </ul>
+      <span class="nav-item social-icons">
+          <span class="fa-stack">
+              <a href="#your-link">
+                  <i class="fas fa-circle fa-stack-2x facebook"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x"></i>
+              </a>
+          </span>
+          <span class="fa-stack">
+              <a href="#your-link">
+                  <i class="fas fa-circle fa-stack-2x twitter"></i>
+                  <i class="fab fa-twitter fa-stack-1x"></i>
+              </a>
+          </span>
+      </span>
+  </div>
+</nav> <!-- end of navbar -->
+  <div class="header-content">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="text-container">
+                      <h2><span class="turquoise">GrowIndia</span> OneStep</h2>
+                      <p class="p-large"></p>
+                      <a class="btn-solid-lg page-scroll" href="#services">SignUp</a>
+                  </div> <!-- end of text-container -->
+              </div> <!-- end of col -->
+              <div class="col-lg-6">
+                  <div class="image-container">
+                      <!-- <img class="img-fluid" src="images/header-teamwork.svg" alt="alternative"> -->
+                  </div> <!-- end of image-container -->
+              </div> <!-- end of col -->
+          </div> <!-- end of row -->
+      </div> <!-- end of container -->
+  </div> <!-- end of header-content -->
+</header> <!-- end of header -->
+<!-- end of header -->
+
+
+
+<!-- Pricing -->
+<div id="services" class="cards-2">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <h2>Our Services</h2>
+              <p class="p-heading p-large">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum dolore dignissimos corporis soluta! Eveniet obcaecati dicta nostrum culpa aperiam. Consequatur, minus incidunt cum ut quaerat labore sequi doloribus at ipsa facilis repellendus mollitia, optio provident aut obcaecati aspernatur reiciendis illo?</p>
+          </div> <!-- end of col -->
+      </div> <!-- end of row -->
+      <div class="row">
+          <div class="col-lg-12">
+
+              <!-- Card-->
+              <div class="card">
+                  <div class="card-body">
+                      <div class="card-title">Online News</div>
+                      <div class="card-subtitle">Just to see </div>
+                      <hr class="cell-divide-hr">
+                      <div class="price">
+                          <span class="currency">1</span><span class="value">lorem</span>
+                          <div class="frequency"></div>
+                      </div>
+                      <hr class="cell-divide-hr">
+                      <ul class="list-unstyled li-space-lg">
+                          <li class="media">
+                              <i class="fas fa-check"></i><div class="media-body">Get Latest News</div>
+                          </li>
+                          <li class="media">
+                              <i class="fas fa-check"></i><div class="media-body">Based On Your Area</div>
+                          </li>
+                          <li class="media">
+                              <i class="fas fa-times"></i><div class="media-body">Lorem ipsum dolor, sit amet consectetur</div>
+                          </li>
+                          <li class="media">
+                              <i class="fas fa-times"></i><div class="media-body">Lorem ipsum dolor sit.</div>
+                          </li>
+                          <li class="media">
+                              <i class="fas fa-times"></i><div class="media-body">Lorem ipsum dolor sit amet.</div>
+                          </li>
+                      </ul>
+                      <div class="button-wrapper">
+                          <a class="btn-solid-reg page-scroll" href="news.html">READ</a>
+                      </div>
+                  </div>
+              </div> <!-- end of card -->
+              <!-- end of card -->
+
+                          <!-- Card-->
+                          <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">Trust And Foundations</div>
+                                <div class="card-subtitle">Just to see </div>
+                                <hr class="cell-divide-hr">
+                                <div class="price">
+                                    <span class="currency">1</span><span class="value">lorem</span>
+                                    <div class="frequency"></div>
+                                </div>
+                                <hr class="cell-divide-hr">
+                                <ul class="list-unstyled li-space-lg">
+                                    <li class="media">
+                                        <i class="fas fa-check"></i><div class="media-body">Get Latest News</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-check"></i><div class="media-body">Based On Your Area</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-times"></i><div class="media-body">Lorem ipsum dolor, sit amet consectetur</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-times"></i><div class="media-body">Lorem ipsum dolor sit.</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-times"></i><div class="media-body">Lorem ipsum dolor sit amet.</div>
+                                    </li>
+                                </ul>
+                                <div class="button-wrapper">
+                                    <a class="btn-solid-reg page-scroll" href="#request">READ</a>
+                                </div>
+                            </div>
+                        </div> <!-- end of card -->
+
+                           <!-- Card-->
+                           <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">YOJNA's</div>
+                                <div class="card-subtitle">Just to see </div>
+                                <hr class="cell-divide-hr">
+                                <div class="price">
+                                    <span class="currency">1</span><span class="value">lorem</span>
+                                    <div class="frequency"></div>
+                                </div>
+                                <hr class="cell-divide-hr">
+                                <ul class="list-unstyled li-space-lg">
+                                    <li class="media">
+                                        <i class="fas fa-check"></i><div class="media-body">Get Latest News</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-check"></i><div class="media-body">Based On Your Area</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-times"></i><div class="media-body">Lorem ipsum dolor, sit amet consectetur</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-times"></i><div class="media-body">Lorem ipsum dolor sit.</div>
+                                    </li>
+                                    <li class="media">
+                                        <i class="fas fa-times"></i><div class="media-body">Lorem ipsum dolor sit amet.</div>
+                                    </li>
+                                </ul>
+                                <div class="button-wrapper">
+                                    <a class="btn-solid-reg page-scroll" href="#request">READ</a>
+                                </div>
+                            </div>
+                        </div> <!-- end of card -->
+
+          </div> <!-- end of col -->
+      </div> <!-- end of row -->
+  </div> <!-- end of container -->
+</div> <!-- end of cards-2 -->
+<!-- end of pricing -->
+
+
+
+
+<div class="slider-1">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <h5>Trust & Foundations</h5>
+              
+              <!-- Image Slider -->
+              <div class="slider-container">
+                  <div class="swiper-container image-slider">
+                      <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                              <div class="image-container">
+                                  <!-- <img class="img-responsive" src="images/customer-logo-1.png" alt="alternative"> -->
+                                  <h2>name1</h2>
+                              </div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div class="image-container">
+                                  <!-- <img class="img-responsive" src="images/customer-logo-2.png" alt="alternative"> -->
+                                  <h2>name2</h2>
+                              </div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div class="image-container">
+                                  <!-- <img class="img-responsive" src="images/customer-logo-3.png" alt="alternative"> -->
+                                  <h2>name3</h2>
+                              </div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div class="image-container">
+                                  <!-- <img class="img-responsive" src="images/customer-logo-4.png" alt="alternative"> -->
+                                  <h2>name4</h2>
+                              </div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div class="image-container">
+                                  <!-- <img class="img-responsive" src="images/customer-logo-5.png" alt="alternative"> -->
+                                  <h2>name5</h2>
+                              </div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div class="image-container">
+                                  <!-- <img class="img-responsive" src="images/customer-logo-6.png" alt="alternative"> -->
+                                  <h2>name6</h2>
+                              </div>
+                          </div>
+                      </div> <!-- end of swiper-wrapper -->
+                  </div> <!-- end of swiper container -->
+              </div> <!-- end of slider-container -->
+              <!-- end of image slider -->
+
+          </div> <!-- end of col -->
+      </div> <!-- end of row -->
+  </div> <!-- end of container -->
+</div> <!-- end of slider-1 -->
+<!-- end of customers -->
+
+
+
+
+    <!-- Contact -->
+    <div id="contact" class="form-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Contact Information</h2>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="address">Don't hesitate to give us a call or send us a contact form message</li>
+                        <li><i class="fas fa-map-marker-alt"></i>2nd Cross Road, Tavarkere, Krishnappa Garden, 1st Stage BTM Layout, Bengaluru, Karnataka 560029</li>
+                        <li><i class="fas fa-phone"></i><a class="turquoise" href="tel:003024630820">+919876543210</a></li>
+                        <li><i class="fas fa-envelope"></i><a class="turquoise" href="mailto:office@evolo.com">office@growindia.com</a></li>
+                    </ul>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.790900387694!2d77.60527011534298!3d12.921156719477946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150017aa8fab%3A0xd41720068b4a1394!2s2nd%20Cross%20Rd%2C%20Tavarekere%2C%201st%20Stage%2C%20BTM%20Layout%2C%20Bengaluru%2C%20Karnataka%20560029!5e0!3m2!1sen!2sin!4v1610199483529!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    
+                    <!-- Contact Form -->
+                    <form id="contactForm" data-toggle="validator" data-focus="false">
+                        <div class="form-group">
+                            <input type="text" class="form-control-input" id="cname" required>
+                            <label class="label-control" for="cname">Name</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control-input" id="cemail" required>
+                            <label class="label-control" for="cemail">Email</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
+                            <label class="label-control" for="cmessage">Your message</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and agree with GrowIndia stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
+                        </div>
+                        <div class="form-message">
+                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+                        </div>
+                    </form>
+                    <!-- end of contact form -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form-2 -->
+    <!-- end of contact -->
+
+
+
+
+  <section class="section blue_pattern_bg" style="background-color: #3b3bff;">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-6">
+             <div class="full">
+                <h4>Subscribe Now to Our Newsletter !</h4>
+                <p>adipiscing elit, sed do eiusmod tempor incididunt ut<br>labore et dolore magna aliqua.</p>
+             </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form_subribe my-2">
+               <form class="">
+                  <input type="email" name="email" placeholder="Enter Your Email">
+                  <button>Subscribe</button>
+               </form>
+            </div>
+          </div>
+       </div>
+    </div>
+ </section>
+
+
+
+
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="footer-col">
+                    <h4>About GrowIndia</h4>
+                    <p>We're passionate about offering some of the best news and problems based on your locality</p>
+                </div>
+            </div> <!-- end of col -->
+            <div class="col-md-4">
+                <div class="footer-col middle">
+                    <h4>Important Links</h4>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body">Our business partners <a class="turquoise" href="#your-link">ourstartapp.com</a></div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body">Read our <a class="turquoise" href="terms-conditions.html">Terms & Conditions</a>, <a class="turquoise" href="privacy-policy.html">Privacy Policy</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- end of col -->
+            <div class="col-md-4">
+                <div class="footer-col last">
+                    <h4>Social Media</h4>
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-facebook-f fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-twitter fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-google-plus-g fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-instagram fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                        </a>
+                    </span>
+                </div> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of footer -->  
+<!-- end of footer -->
+
+
+   <!-- Copyright -->
+   <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="p-small">Copyright © 2021 <a href="#">GrowIndia</a> - All rights reserved</p>
+            </div> <!-- end of col -->
+        </div> <!-- enf of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of copyright --> 
+<!-- end of copyright -->
+
+</body>
 
 {% endblock content %}
